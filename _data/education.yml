@@ -1,13 +1,16 @@
-# Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
-  awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+- school: "Korea University"
+  degree: "Combined M.S. & Ph.D."
+  major: "Computer Science and Engineering"
+  duration: "Mar. 2023 – Present"
+  gpa: "4.38 / 4.5"
+  advisor: "Gunjae Koo"
+  location: "Seoul, Korea"
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- school: "Sangmyung University"
+  degree: "B.S."
+  major: "System Semiconductor Engineering"
+  duration: "Mar. 2019 – Aug. 2022"
+  gpa: "4.28 / 4.5"
+  thesis: "An Implementation of CNN-based Real-Time Face Mask Detector using Jetson Nano"
+  advisor: "Yongwoo Kim"
+  location: "Cheonan, Korea"
