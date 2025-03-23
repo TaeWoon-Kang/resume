@@ -1,0 +1,11 @@
+international:
+  - title: "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications"
+    authors: "Taewoon Kang, Geonwoo Choi, Taeweon Suh, Gunjae Koo"
+    venue: "ICS'25 (Under Review)"
+    year: "2025"
+
+domestic:
+  - title: "An Implementation of CNN-based Real-Time Face Mask Detector using Jetson Nano"
+    authors: "Taewoon Kang, Yongwoo Kim"
+    venue: "JKAIS"
+    year: "2022"
