@@ -1,0 +1,25 @@
+- title: "The top prize of CISC Career day"
+  institution: "Sangmyung University"
+  date: "May. 2022"
+
+- title: "Header(in one's dept.) Scholarship"
+  institution: "Sangmyung University"
+  date:
+    - "Mar. 2022"
+    - "Sep. 2021"
+
+- title: "\"BONGSA\" Scholarship (Leader of Department)"
+  institution: "Sangmyung University"
+  date:
+    - "Sep. 2021"
+    - "Mar. 2021"
+
+- title: "Work Scholarship"
+  institution: "Sangmyung University"
+  date: "Mar. 2021"
+
+- title: "Secondary Header(in one's dept.) Scholarship"
+  institution: "Sangmyung University"
+  date:
+    - "Mar. 2021"
+    - "Sep. 2020"
