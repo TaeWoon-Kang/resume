@@ -1,9 +1,6 @@
 teaching_assistant:
   - course: "Digital Logic Design"
-    duration:
-      - "Spring 2023"
-      - "Fall 2023"
+    duration: "Spring 2023, Fall 2023"
 
   - course: "Basic of SW"
-    duration:
-      - "Spring 2025"
+    duration: "Spring 2025"

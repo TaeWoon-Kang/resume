@@ -1,11 +1,26 @@
 international:
   - title: "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications"
     authors: "Taewoon Kang, Geonwoo Choi, Taeweon Suh, Gunjae Koo"
-    venue: "ICS'25 (Under Review)"
+    venue: "ICS '25: Proceedings of the 39th ACM International Conference on Supercomputing"
     year: "2025"
 
 domestic:
+  - title: "A Design and Implementation of MP3 Player using ARM Cortex-M0 DesignStart"
+    authors: "Sang-un Jo, Tae-woon Kang, Yongwoo Kim"
+    venue: "The Korean Institute of Electrical Engineers Workshop, Yeosu, Korea"
+    year: "2022"
+
+  - title: "A Design and Verification of ARM Cortex-M0 DesignStart MCU System Using Open Source IP"
+    authors: "Sang-un Jo, Tae-Woon Kang, Yongwoo Kim"
+    venue: "ICS 2022, Jeonju, Korea"
+    year: "2022"
+
   - title: "An Implementation of CNN-based Real-Time Face Mask Detector using Jetson Nano"
     authors: "Taewoon Kang, Yongwoo Kim"
-    venue: "JKAIS"
+    venue: "JKAIS, Vol. 23"
     year: "2022"
+
+  - title: "Performance Analysis of a Per-Row Activation Counting Mechanism in DRAM"
+    authors: "Seongpil Yang, Taewoon Kang"
+    venue: "The Institute of Electronics and Information Engineers 2025 Summer Conference"
+    year: "2025"
