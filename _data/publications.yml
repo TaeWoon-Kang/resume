@@ -1,10 +1,30 @@
 international:
+  - title: "SoftmaxPIM: An HBM-Based PIM Architecture for Accelerating GeMV-Softmax Execution Pipeline"
+    authors: "Taewoon Kang, Namhun Kim, Jihun Lee, Gunjae Koo"
+    venue: "IEEE Computer Architecture Letters"
+    year: "2026"
+
+  - title: "SparsePIM+: Accelerating SpMV on HBM-Based PIM via Logic-Die Accumulators with Opportunistic TSV Utilization"
+    authors: "Taewoon Kang, Namhun Kim, Geonwoo Choi, Taeweon Suh, Gunjae Koo"
+    venue: "Journal of Systems Architecture"
+    year: "2026"
+
+  - title: "SumcheckPIM: An Efficient HBM-Based PIM Architecture for Linear Complexity Zero Knowledge Proofs"
+    authors: "Sunchae Kim, Taewoon Kang, Sangwon Shin, Taeweon Suh, Yibin Yang, Gunjae Koo"
+    venue: "ACM International Conference on Supercomputing"
+    year: "2026"
+
   - title: "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications"
     authors: "Taewoon Kang, Geonwoo Choi, Taeweon Suh, Gunjae Koo"
     venue: "ICS '25: Proceedings of the 39th ACM International Conference on Supercomputing"
     year: "2025"
 
 domestic:
+  - title: "Performance Analysis of a Per-Row Activation Counting Mechanism in DRAM"
+    authors: "Seongpil Yang, Taewoon Kang"
+    venue: "The Institute of Electronics and Information Engineers 2025 Summer Conference"
+    year: "2025"
+
   - title: "A Design and Implementation of MP3 Player using ARM Cortex-M0 DesignStart"
     authors: "Sang-un Jo, Tae-woon Kang, Yongwoo Kim"
     venue: "The Korean Institute of Electrical Engineers Workshop, Yeosu, Korea"
@@ -19,8 +39,3 @@ domestic:
     authors: "Taewoon Kang, Yongwoo Kim"
     venue: "JKAIS, Vol. 23"
     year: "2022"
-
-  - title: "Performance Analysis of a Per-Row Activation Counting Mechanism in DRAM"
-    authors: "Seongpil Yang, Taewoon Kang"
-    venue: "The Institute of Electronics and Information Engineers 2025 Summer Conference"
-    year: "2025"

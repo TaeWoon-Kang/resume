@@ -1,6 +1,7 @@
 programming_languages:
+  - "C (including Atmel and Keil)"
+  - "C++"
   - "Python (PyTorch)"
-  - "C (Atmel, Keil)"
   - "Verilog 2001"
   - "SystemVerilog"
 
@@ -15,13 +16,15 @@ hardware_skills:
   - "ASIC/Semi-custom chip design and verification"
 
 simulation_tools:
-  - "Gem5 Architectural Simulation"
+  - "GEM5"
+  - "DRAMsim3"
 
 coursework:
-  - "Calculus, Engineering Mathematics"
-  - "Digital Logic Circuit"
-  - "Computer Architecture and Design"
-  - "SoC Design"
+  - "Parallel Processing, AI Accelerator Architecture"
+  - "Advanced Computer Architecture, Storage System Architecture"
+  - "ARM Cortex-M Series IP Implementation"
   - "Electrical Circuit, Microelectronic Circuit"
-  - "Semiconductor Physics, Fabrication Process"
-  - "VLSI Design"
+  - "Semi-Custom ASIC Design with Synopsys Design Tool, VLSI Design"
+  - "Digital Logic Circuit, Computer Architecture and Design, Design with Verilog, SoC Design"
+  - "Semiconductor Physics, Semiconductor Fabrication Process"
+  - "Calculus, Engineering Mathematics"

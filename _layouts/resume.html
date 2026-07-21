@@ -38,11 +38,19 @@
         {% endif %}
       </header>
 
-      {% if site.resume_section_experience and site.data.experiences.teaching_assistant %}
+      {% if site.resume_section_experience %}
       <section class="content-section">
         <header class="section-header">
           <h2>Experience</h2>
         </header>
+
+        {% for experience in site.data.experiences.research_experience %}
+        <div class="resume-item">
+          <h3 class="resume-item-title">{{ experience.role }}</h3>
+          <h4 class="resume-item-details">{{ experience.organization }} &bull; {{ experience.duration }}</h4>
+          <p class="resume-item-copy">{{ experience.location }}{% if experience.summary %} | {{ experience.summary }}{% endif %}</p>
+        </div>
+        {% endfor %}
 
         {% for experience in site.data.experiences.teaching_assistant %}
         <div class="resume-item">

@@ -1,3 +1,16 @@
+research_experience:
+  - role: "Visiting Scholar"
+    organization: "Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California"
+    location: "United States"
+    duration: "Jan. 2026 - Present"
+    summary: "Conducting collaborative research under the supervision of Prof. Annavaram."
+
+  - role: "Intern"
+    organization: "SK Telecom"
+    location: "Korea"
+    duration: "Jul. 2023 - Aug. 2023"
+    summary: "Developed spam detection methods using AI."
+
 teaching_assistant:
   - course: "Digital Logic Design"
     duration: "Spring 2023, Fall 2023"
