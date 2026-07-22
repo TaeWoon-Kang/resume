@@ -1,6 +1,6 @@
 international:
   - title: "SoftmaxPIM: An HBM-Based PIM Architecture for Accelerating GeMV-Softmax Execution Pipeline"
-    authors: "Taewoon Kang, Namhun Kim, Jihun Lee, Gunjae Koo"
+    authors: "Taewoon Kang, Namhun Kim, Jihun Lee, Murali Annavaram, Gunjae Koo"
     venue: "IEEE Computer Architecture Letters"
     year: "2026"
 
@@ -11,7 +11,7 @@ international:
 
   - title: "SumcheckPIM: An Efficient HBM-Based PIM Architecture for Linear Complexity Zero Knowledge Proofs"
     authors: "Sunchae Kim, Taewoon Kang, Sangwon Shin, Taeweon Suh, Yibin Yang, Gunjae Koo"
-    venue: "ACM International Conference on Supercomputing"
+    venue: "ICS '26: Proceedings of the 40th ACM International Conference on Supercomputing"
     year: "2026"
 
   - title: "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications"
