@@ -1,21 +1,19 @@
-// Variables
-// ---------------------------------------/
+$container-width: 1180px !default;
+$grid-gutter: 24px !default;
 
-$container-width: 980px !default;
-$grid-gutter:     10px !default;
+$ink: #132322;
+$forest: #102b2a;
+$forest-soft: #1b3b39;
+$lime: #c8f169;
+$paper: #f4f3ed;
+$white: #ffffff;
+$mist: #dfe6df;
+$line: #cbd3cc;
+$muted: #64716d;
+$black: #132322;
+$text_color: $ink;
 
-// Colors
-$white:             #fff;
-$black:             #333;
-
-// Styles
-$text_color:        $black;
-
-// Font stack
-$body-font: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-// The base body size
-$body-font-size: 13px !default;
-
-// Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$body-font: "Manrope", sans-serif !default;
+$display-font: "Source Serif 4", Georgia, serif !default;
+$mono-font: "DM Mono", monospace !default;
+$body-font-size: 16px !default;

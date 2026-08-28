@@ -1,13 +1,17 @@
 # Site settings
-title: "Taewoon's Resume"
-#description: "A resume template for Jekyll and GitHub Pages sites."
-description: "A resume template for Taewoon Kang."
+title: "Taewoon Kang | Computer Architecture Researcher"
+description: "Taewoon Kang is a Ph.D. student researching processing-in-memory, AI accelerators, and computer architecture."
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
+
+exclude:
+  - hugo-csarch-data
+  - tmp
+  - _vendor
 
 # Resume settings
 resume_avatar:                  "true"
@@ -51,6 +55,10 @@ resume_social_links:
   resume_linkedin_url:          "https://www.linkedin.com/in/taewoonkang"
   resume_website_url:           "https://taewoon-kang.github.io/resume/"
 resume_print_social_links:      true
+
+resume_affiliation:             "Korea University"
+resume_lab:                     "Computer System Architecture Lab"
+resume_location_short:          "Seoul, Korea"
 
 # Design settings
 resume_theme:                   default

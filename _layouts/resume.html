@@ -1,221 +1,267 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   {% include head.html %}
 
-  <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
-
-    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-      <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
-
-      <header class="page-header">
-        {% if site.resume_avatar == 'true' %}
-        <img src="images/avatar.jpg" alt="Portrait of {{ site.resume_name }}" class="avatar no-print" itemprop="image">
-        {% endif %}
-
-        <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
-
-        {% if site.display_header_contact_info == 'true' %}
-        <div class="header-contact-info">
-          <p>{{ site.resume_header_contact_info }}</p>
+  <body class="theme-{{ site.resume_theme | default: 'default' }}">
+    <nav class="site-nav no-print" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#top" aria-label="Back to top">
+          <span class="brand-mark">TK</span>
+          <span class="brand-name">Taewoon Kang</span>
+        </a>
+        <div class="nav-links">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#background">Background</a>
         </div>
-        {% endif %}
+      </div>
+    </nav>
 
-        <div class="title-bar no-print">
-          <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
-          {% include icon-links.html %}
+    <main id="top" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}">
+      <meta itemprop="address" content="{{ site.resume_contact_address }}">
+
+      <header class="hero">
+        <div class="hero-grid"></div>
+        <div class="page-shell hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span>{{ site.resume_lab }}</p>
+            <h1 itemprop="name">{{ site.resume_name }}</h1>
+            <p class="hero-role" itemprop="jobTitle">{{ site.resume_title }}</p>
+            <div class="hero-summary" itemprop="description">{{ site.resume_header_intro }}</div>
+
+            <div class="hero-actions no-print">
+              <a class="button button-primary" href="mailto:{{ site.resume_contact_email }}" itemprop="email">Get in touch</a>
+              <a class="button button-secondary" href="#publications">View publications <span aria-hidden="true">&darr;</span></a>
+            </div>
+
+            <dl class="hero-meta">
+              <div>
+                <dt>Affiliation</dt>
+                <dd>{{ site.resume_affiliation }}</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
+                <dd>{{ site.resume_location_short }}</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Memory-centric systems</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="profile-panel" aria-label="Profile and social links">
+            <div class="portrait-frame">
+              <div class="portrait-offset"></div>
+              {% if site.resume_avatar == 'true' %}
+              <img src="images/avatar.jpg" alt="Portrait of {{ site.resume_name }}" itemprop="image">
+              {% endif %}
+            </div>
+            <div class="profile-status"><span></span>Visiting Scholar at USC</div>
+            {% include icon-links.html %}
+          </aside>
         </div>
-
-        <div class="executive-summary" itemprop="description">
-          {{ site.resume_header_intro }}
-        </div>
-
-        {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-        {% elsif site.resume_looking_for_work == 'no' %}
-        <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
-        {% endif %}
       </header>
 
-      {% if site.resume_section_experience %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Experience</h2>
-        </header>
-
-        {% for experience in site.data.experiences.research_experience %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">{{ experience.role }}</h3>
-          <h4 class="resume-item-details">{{ experience.organization }} &bull; {{ experience.duration }}</h4>
-          <p class="resume-item-copy">{{ experience.location }}{% if experience.summary %} | {{ experience.summary }}{% endif %}</p>
+      {% if site.resume_section_interests %}
+      <section class="section research-band" id="research">
+        <div class="page-shell">
+          <div class="section-intro">
+            <p class="section-kicker">Research direction</p>
+            <h2>Bringing computation closer to data.</h2>
+            <p>I design memory-centric architectures that reduce data movement and make irregular, bandwidth-bound workloads run efficiently.</p>
+          </div>
+          <div class="interest-grid">
+            {% for interest in site.data.interests %}
+            <div class="interest-item">
+              <span class="interest-number">0{{ forloop.index }}</span>
+              <h3>{{ interest }}</h3>
+            </div>
+            {% endfor %}
+          </div>
         </div>
-        {% endfor %}
-
-        {% for experience in site.data.experiences.teaching_assistant %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">Teaching Assistant</h3>
-          <h4 class="resume-item-details">{{ experience.course }} &bull; {{ experience.duration }}</h4>
-        </div>
-        {% endfor %}
-      </section>
-      {% endif %}
-
-      {% if site.resume_section_education %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Education</h2>
-        </header>
-
-        {% for education in site.data.education %}
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name">{{ education.school }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ education.degree }} in {{ education.major }} &bull; {{ education.duration }}</h4>
-          <p class="resume-item-copy">
-            GPA: {{ education.gpa }}{% if education.advisor %} | Advisor: {{ education.advisor }}{% endif %}{% if education.location %} | {{ education.location }}{% endif %}
-          </p>
-          {% if education.thesis %}
-          <p class="resume-item-copy">Thesis: {{ education.thesis }}</p>
-          {% endif %}
-        </div>
-        {% endfor %}
-      </section>
-      {% endif %}
-
-      {% if site.resume_section_projects %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Projects</h2>
-        </header>
-
-        {% for project in site.data.projects %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{{ project.name }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.period }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
-          {% if project.advisor %}
-          <p class="resume-item-copy">Advisor: {{ project.advisor }}</p>
-          {% endif %}
-        </div>
-        {% endfor %}
       </section>
       {% endif %}
 
       {% if site.resume_section_publications %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Publications</h2>
-        </header>
+      <section class="section publications-section" id="publications">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Selected work</p>
+              <h2>Publications</h2>
+            </div>
+            <p class="section-note">International conference and journal publications in PIM, HBM, and hardware acceleration.</p>
+          </div>
 
-        {% if site.data.publications.international and site.data.publications.international.size > 0 %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">International</h3>
-        </div>
-        {% for publication in site.data.publications.international %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">{{ publication.title }}</h3>
-          <h4 class="resume-item-details">{{ publication.venue }} &bull; {{ publication.year }}</h4>
-          <p class="resume-item-copy">{{ publication.authors }}</p>
-        </div>
-        {% endfor %}
-        {% endif %}
-
-        {% if site.data.publications.domestic and site.data.publications.domestic.size > 0 %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">Domestic</h3>
-        </div>
-        {% for publication in site.data.publications.domestic %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">{{ publication.title }}</h3>
-          <h4 class="resume-item-details">{{ publication.venue }} &bull; {{ publication.year }}</h4>
-          <p class="resume-item-copy">{{ publication.authors }}</p>
-        </div>
-        {% endfor %}
-        {% endif %}
-      </section>
-      {% endif %}
-
-      {% if site.resume_section_skills %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-
-        {% for skill_group in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill_group[0] | replace: "_", " " | capitalize }}</h4>
-          <p class="resume-item-copy">{{ skill_group[1] | join: ", " }}</p>
-        </div>
-        {% endfor %}
-      </section>
-      {% endif %}
-
-      {% if site.resume_section_recognition %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Awards</h2>
-        </header>
-
-        {% for award in site.data.awards %}
-        <div class="resume-item">
-          <h3 class="resume-item-title">{{ award.title }}</h3>
-          <h4 class="resume-item-details">{{ award.institution }} &bull; {{ award.date }}</h4>
-        </div>
-        {% endfor %}
-      </section>
-      {% endif %}
-
-      {% if site.resume_section_interests %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Research Interests</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for interest in site.data.interests %}
-            <li>{{ interest }}</li>
+          <div class="publication-list">
+            {% for publication in site.data.publications.international %}
+            <article class="publication-card">
+              <div class="publication-index">{{ forloop.index | prepend: '0' }}</div>
+              <div class="publication-body">
+                <div class="publication-meta">
+                  <span class="venue-chip">{{ publication.short | default: publication.type }}</span>
+                  <span>{{ publication.type }}</span>
+                  <span>{{ publication.year }}</span>
+                </div>
+                <h3>{{ publication.title }}</h3>
+                <p class="publication-authors">{{ publication.authors }}</p>
+                <p class="publication-venue">{{ publication.venue }}</p>
+                {% if publication.doi or publication.pdf or publication.slides %}
+                <div class="publication-links no-print">
+                  {% if publication.doi %}<a href="https://doi.org/{{ publication.doi }}">DOI <span aria-hidden="true">&nearr;</span></a>{% endif %}
+                  {% if publication.pdf %}<a href="{{ publication.pdf }}">PDF <span aria-hidden="true">&darr;</span></a>{% endif %}
+                  {% if publication.slides %}<a href="{{ publication.slides }}">Slides <span aria-hidden="true">&nearr;</span></a>{% endif %}
+                </div>
+                {% endif %}
+              </div>
+            </article>
             {% endfor %}
-          </ul>
+          </div>
+
+          <details class="domestic-publications">
+            <summary>Domestic publications <span>{{ site.data.publications.domestic.size }}</span></summary>
+            <div class="compact-publication-list">
+              {% for publication in site.data.publications.domestic %}
+              <article>
+                <span>{{ publication.year }}</span>
+                <div>
+                  <h3>{{ publication.title }}</h3>
+                  <p>{{ publication.authors }} &middot; {{ publication.venue }}</p>
+                </div>
+              </article>
+              {% endfor %}
+            </div>
+          </details>
         </div>
       </section>
       {% endif %}
 
-      {% if site.resume_section_links %}
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Additional Links</h2>
-        </header>
-
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for link in site.data.links %}
-            <li><a href="{{ link.url }}" itemprop="url">{{ link.description }}</a></li>
+      {% if site.resume_section_experience %}
+      <section class="section experience-section" id="experience">
+        <div class="page-shell two-column-section">
+          <div class="section-intro sticky-intro">
+            <p class="section-kicker">Where I have worked</p>
+            <h2>Research &amp;<br>experience</h2>
+            <p>Academic and industry experience across architecture research, applied AI, and teaching.</p>
+          </div>
+          <div class="timeline">
+            {% for experience in site.data.experiences.research_experience %}
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">{{ experience.duration }}</p>
+              <h3>{{ experience.role }}</h3>
+              <p class="timeline-org">{{ experience.organization }}</p>
+              <p>{{ experience.summary }}</p>
+              <span class="timeline-location">{{ experience.location }}</span>
+            </article>
             {% endfor %}
-          </ul>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">2023 - 2025</p>
+              <h3>Teaching Assistant</h3>
+              {% for experience in site.data.experiences.teaching_assistant %}
+              <p class="timeline-org">{{ experience.course }} <span>&middot; {{ experience.duration }}</span></p>
+              {% endfor %}
+              <span class="timeline-location">Korea University</span>
+            </article>
+          </div>
         </div>
       </section>
       {% endif %}
 
-      {% if site.resume_print_social_links %}
-      <section class="content-section print-only">
-        <header class="section-header">
-          <h2>Social Links</h2>
-        </header>
+      <section class="section background-section" id="background">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Foundation</p>
+              <h2>Background</h2>
+            </div>
+          </div>
 
-        <div class="resume-item">
-          {% include print-social-links.html %}
+          {% if site.resume_section_education %}
+          <div class="education-list">
+            {% for education in site.data.education %}
+            <article class="education-item" itemscope itemprop="alumniOf" itemtype="https://schema.org/CollegeOrUniversity">
+              <p class="education-year">{{ education.duration }}</p>
+              <div>
+                <h3 itemprop="name">{{ education.school }}</h3>
+                <p class="education-degree">{{ education.degree }} in {{ education.major }}</p>
+                <p>Advisor: {{ education.advisor }} &middot; GPA {{ education.gpa }} &middot; {{ education.location }}</p>
+                {% if education.thesis %}<p class="education-thesis">Thesis: {{ education.thesis }}</p>{% endif %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if site.resume_section_projects %}
+          <div class="project-strip">
+            <p class="section-kicker">Earlier project</p>
+            {% for project in site.data.projects %}
+            <article>
+              <div>
+                <span>{{ project.period }} &middot; {{ project.role }}</span>
+                <h3>{{ project.name }}</h3>
+              </div>
+              <p>{{ project.description }} Advisor: {{ project.advisor }}.</p>
+            </article>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="background-grid">
+            {% if site.resume_section_skills %}
+            <section class="skills-block">
+              <h3>Technical toolkit</h3>
+              {% for skill_group in site.data.skills %}
+              <div class="skill-row">
+                <h4>{{ skill_group[0] | replace: '_', ' ' }}</h4>
+                <div class="skill-tags">
+                  {% for skill in skill_group[1] %}<span>{{ skill }}</span>{% endfor %}
+                </div>
+              </div>
+              {% endfor %}
+            </section>
+            {% endif %}
+
+            {% if site.resume_section_recognition %}
+            <section class="awards-block">
+              <h3>Awards &amp; honors</h3>
+              {% for award in site.data.awards %}
+              <article>
+                <span>{{ award.date }}</span>
+                <div>
+                  <h4>{{ award.title }}</h4>
+                  <p>{{ award.institution }}</p>
+                </div>
+              </article>
+              {% endfor %}
+            </section>
+            {% endif %}
+          </div>
         </div>
       </section>
-      {% endif %}
 
-      <footer class="page-footer">
-        <p class="footer-line">{{ site.resume_name }} &bull; {{ site.resume_contact_email }}</p>
+      <footer class="site-footer">
+        <div class="page-shell footer-inner">
+          <div>
+            <p class="footer-label">Let's build efficient systems.</p>
+            <a href="mailto:{{ site.resume_contact_email }}">{{ site.resume_contact_email }}</a>
+          </div>
+          <div class="footer-meta">
+            <p>{{ site.resume_name }}</p>
+            <p>{{ site.resume_affiliation }} &middot; {{ site.resume_location_short }}</p>
+          </div>
+        </div>
       </footer>
 
-    </div>
-
+      {% if site.resume_print_social_links %}
+      <section class="print-only">{% include print-social-links.html %}</section>
+      {% endif %}
+    </main>
   </body>
-
 </html>
