@@ -5,6 +5,8 @@ international:
     year: "2026"
     type: "Journal"
     short: "CAL"
+    doi: "10.1109/LCA.2026.3716671"
+    pdf: "/files/publications/SoftmaxPIM_An_HBM-Based_PIM_Architecture_for_Accelerating_GeMVSoftmax_Execution_Pipeline.pdf"
 
   - title: "SparsePIM+: Accelerating SpMV on HBM-Based PIM via Logic-Die Accumulators with Opportunistic TSV Utilization"
     authors: "Taewoon Kang, Namhun Kim, Geonwoo Choi, Taeweon Suh, Gunjae Koo"
