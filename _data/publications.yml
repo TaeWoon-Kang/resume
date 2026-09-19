@@ -4,7 +4,7 @@ international:
     venue: "Proceedings of the 2026 ACM Annual Technical Conference"
     year: "2026"
     type: "Conference"
-    short: "ACM ATC '26"
+    short: "ATC '26"
     status: "To appear"
 
   - title: "SoftmaxPIM: An HBM-Based PIM Architecture for Accelerating GeMV-Softmax Execution Pipeline"
