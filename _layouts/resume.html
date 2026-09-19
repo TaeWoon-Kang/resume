@@ -105,6 +105,7 @@
                   <span class="venue-chip">{{ publication.short | default: publication.type }}</span>
                   <span>{{ publication.type }}</span>
                   <span>{{ publication.year }}</span>
+                  {% if publication.status %}<span>{{ publication.status }}</span>{% endif %}
                 </div>
                 <h3>{{ publication.title }}</h3>
                 <p class="publication-authors">{{ publication.authors }}</p>
