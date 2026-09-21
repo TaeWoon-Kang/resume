@@ -34,6 +34,11 @@
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-linkedin.html %}</a></li>
   {% endif %}
 
+  <!-- CV link -->
+  {% if site.resume_social_links.resume_cv_url %}
+  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_cv_url }}" class="icon-link" target="_blank" rel="noopener" aria-label="Open CV as PDF" title="CV">{% include icons/icon-pdf.html %}</a></li>
+  {% endif %}
+
   <!-- Instagram link -->
   {% if site.resume_social_links.resume_instagram_url %}
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_instagram_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-instagram.html %}</a></li>

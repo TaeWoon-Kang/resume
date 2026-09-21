@@ -53,6 +53,7 @@ resume_section_interests:       true
 resume_social_links:
   resume_github_url:            "https://github.com/taewoon-kang"
   resume_linkedin_url:          "https://www.linkedin.com/in/taewoonkang"
+  resume_cv_url:                "/files/cv/cv.pdf"
   resume_website_url:           "https://taewoonkang.com/"
 resume_print_social_links:      true
 
