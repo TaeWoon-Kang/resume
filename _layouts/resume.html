@@ -249,17 +249,22 @@
           <aside class="side-projects" aria-labelledby="side-projects-title">
             <p class="section-kicker" id="side-projects-title">Side project</p>
             {% for project in site.data.side_projects %}
-            <a class="side-project-card" href="{{ project.url }}" target="_blank" rel="noopener">
-              <img src="{{ project.icon }}" alt="{{ project.name }} app icon" width="64" height="64" loading="lazy">
+            <article class="side-project-card">
+              <span class="side-project-icon">
+                <img src="{{ project.icon }}" alt="{{ project.name }} app icon" width="72" height="72" loading="lazy">
+              </span>
               <div class="side-project-copy">
                 <div class="side-project-heading">
                   <h3>{{ project.name }}</h3>
-                  <span>{{ project.period }} &middot; {{ project.platform }}</span>
+                  <span class="side-project-meta">{{ project.period }} &middot; {{ project.platform }}</span>
                 </div>
                 <p>{{ project.description }}</p>
               </div>
-              <span class="side-project-link">Visit site <span aria-hidden="true">&nearr;</span></span>
-            </a>
+              <div class="side-project-actions">
+                <a class="side-project-link" href="{{ project.url }}" target="_blank" rel="noopener">Visit site <span aria-hidden="true">&nearr;</span></a>
+                <a class="side-project-link side-project-link-primary" href="{{ project.app_store_url }}" target="_blank" rel="noopener">App Store <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </article>
             {% endfor %}
           </aside>
           {% endif %}
