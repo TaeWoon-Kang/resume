@@ -1,0 +1,6 @@
+- name: "PDFListener"
+  period: "2026"
+  platform: "macOS"
+  url: "https://pdflistener.me"
+  icon: "/images/projects/pdflistener-icon.png"
+  description: "Developed with AI-assisted vibe coding, PDFListener reads English research PDFs aloud using local speech synthesis and synchronized sentence highlighting."
