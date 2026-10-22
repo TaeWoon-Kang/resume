@@ -696,7 +696,8 @@
 }
 
 .skills-block > h3,
-.awards-block > h3 {
+.awards-block > h3,
+.academic-service-block > h3 {
   margin: 0 0 28px;
   font-family: $display-font;
   font-size: 30px;
@@ -747,6 +748,35 @@
     margin: 0;
     font-size: 13px;
     line-height: 1.45;
+  }
+
+  p {
+    margin: 5px 0 0;
+    color: $muted;
+    font-size: 11px;
+  }
+}
+
+.academic-service-block {
+  margin-top: 48px;
+
+  article {
+    padding: 18px 0;
+    border-top: 1px solid $line;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  h4 span {
+    margin-left: 8px;
+    color: $muted;
+    font-family: $mono-font;
+    font-size: 10px;
+    font-weight: 400;
   }
 
   p {

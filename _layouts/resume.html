@@ -229,6 +229,7 @@
             </section>
             {% endif %}
 
+            <div class="recognition-column">
             {% if site.resume_section_recognition %}
             <section class="awards-block">
               <h3>Awards &amp; honors</h3>
@@ -243,6 +244,19 @@
               {% endfor %}
             </section>
             {% endif %}
+
+            {% if site.data.experiences.academic_committee %}
+            <section class="academic-service-block">
+              <h3>Academic Service</h3>
+              {% for committee in site.data.experiences.academic_committee %}
+              <article>
+                <h4>{{ committee.role }} <span>{{ committee.year }}</span></h4>
+                <p>{{ committee.organization }}</p>
+              </article>
+              {% endfor %}
+            </section>
+            {% endif %}
+            </div>
           </div>
 
           {% if site.data.side_projects %}

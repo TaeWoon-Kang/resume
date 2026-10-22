@@ -11,6 +11,14 @@ research_experience:
     duration: "Jun. 2023 - Aug. 2023"
     summary: "Developed spam detection methods using AI."
 
+academic_committee:
+  - role: "Junior Program Committee"
+    organization: "ACM International Conference on Supercomputing (ICS)"
+    year: "2027"
+  - role: "Artifact Evaluation Committee"
+    organization: "IEEE/ACM International Symposium on Microarchitecture (MICRO)"
+    year: "2026"
+
 teaching_assistant:
   - course: "Digital Logic Design"
     duration: "Spring 2023, Fall 2023"
