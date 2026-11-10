@@ -1,4 +1,13 @@
 international:
+  - title: "LogPIM: Low-Overhead Logarithmic Arithmetic for HBM-Based Processing-in-Memory"
+    authors: "Taewoon Kang, Jonghyun Lee, Yujin Kim, Murali Annavaram, Gunjae Koo"
+    venue: "IEEE Computer Architecture Letters"
+    year: "2026"
+    type: "Journal"
+    short: "CAL"
+    status: "To appear"
+    pdf: "/files/publications/LogPIM_pre_print.pdf"
+
   - title: "FLASH: Fault-Led, Attested, Secure Hybrid-Key Checkpoint for Confidential GPU"
     authors: "Jonghyun Lee, Taewoon Kang, Pratheek B, Yongqin Wang, Rachit Rajat, Mengyuan Li, Gunjae Koo, Daniel Wong, Murali Annavaram"
     venue: "Proceedings of the 2026 ACM Annual Technical Conference"
