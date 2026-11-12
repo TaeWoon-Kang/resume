@@ -5,3 +5,11 @@
   app_store_url: "https://apps.apple.com/app/id6817984584"
   icon: "/images/projects/pdflistener-icon.png"
   description: "Built with AI-assisted vibe coding, PDFListener reads English research PDFs aloud on Mac, iPhone, and iPad with on-device speech synthesis and synchronized sentence highlighting."
+
+- name: "Token Tracker: AI Usage"
+  period: "2026"
+  platform: "iPhone"
+  url: "https://token-tracker-support.buzzytulip38.chatgpt.site/"
+  app_store_url: "https://apps.apple.com/us/app/token-tracker-ai-usage/id6826961581"
+  icon: "/images/projects/token-tracker-icon.jpg"
+  description: "An iPhone app that brings AI service usage, remaining quotas, and reset times together, with Home Screen and Lock Screen widgets and quota alerts."

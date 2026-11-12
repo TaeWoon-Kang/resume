@@ -808,6 +808,10 @@
   text-decoration: none;
   transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 
+  & + .side-project-card {
+    margin-top: 16px;
+  }
+
   &::before {
     position: absolute;
     inset: 0 auto 0 0;
@@ -852,6 +856,7 @@
 
 .side-project-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 12px;
 }
@@ -865,6 +870,7 @@
 
 .side-project-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
